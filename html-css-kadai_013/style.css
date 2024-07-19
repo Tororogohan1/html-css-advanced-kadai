@@ -1,13 +1,14 @@
 /* PC、スマホ共通スタイル */
 body {
-  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+    sans-serif;
 }
 
 p {
   font-size: 15px;
 }
 
-#main-visual > img {
+#main-visual>img {
   width: 100%;
 }
 
@@ -19,7 +20,7 @@ PC用のスタイル
   body {
     max-width: 1080px;
     min-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
   }
 
   /* ヘッダー */
@@ -36,28 +37,27 @@ PC用のスタイル
   }
 
   /* ナビゲーションのリンクの装飾設定 */
-  #nav-pc > a {
+  #nav-pc>a {
     text-decoration: none;
     margin-left: 20px;
   }
 
-  #nav-pc > a:link {
+  #nav-pc>a:link {
     color: #0d0d0d;
   }
 
-  #nav-pc > a:visited {
+  #nav-pc>a:visited {
     color: #0d0d0d;
   }
 
-  #nav-pc > a:hover {
+  #nav-pc>a:hover {
     color: #0d0d0d;
     text-decoration: underline;
   }
 
-  #nav-pc > a:active {
+  #nav-pc>a:active {
     color: #0d0d0d;
   }
-
   /* SP用ナビゲーションを非表示にする */
   #menu-sp {
     display: none;
@@ -68,72 +68,67 @@ PC用のスタイル
   }
 }
 
-/* SP用スタイル */
+/* SP用スタイル　*/
 @media (max-width: 767px) {
-  body {
-    min-width: 375px;
-  }
-
-  /* PC用非表示 */
+ body {
+  min-width: 375px;
+ }
+/* PC用非表示*/
   #nav-pc {
     display: none;
   }
+/* バーガーメニュー表示 */
+#menu-sp {
+  float: right;
+  padding: 0;
+}
+/* スマートフォン用ナビゲーションのスタイル */
+#nav-sp {
+  background-color: #ce933e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 100;
+}
 
-  /* バーガーメニュー表示 */
-  #menu-sp {
-    float: right;
-    padding: 0;
-  }
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
-  /* スマートフォン用ナビゲーションのスタイル */
-  #nav-sp {
-    background-color: #ce933e;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: none;
-    z-index: 100;
-  }
+#logo-sp {
+  margin: 80px, 0px, 30px 20px;
+}
 
-  #close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  #logo-sp {
-    margin: 80px, 0px, 30px 20px;
-  }
-
-  #nav-sp > a {
-    display: block;
-  }
-
-  #nav-sp > a:link,
-  #nav-sp > a:visited,
-  #nav-sp > a:hover,
-  #nav-sp > a:active {
+#nav-sp > a {
+  display: block;
+}
+#nav-sp > a:link
+#nav-sp > a:visited,
+#nav-sp > a:hover,
+#nav-sp > a:active {
     text-decoration: none;
   }
-
-  #nav-sp > a:hover {
+#nav-sp > a:hover {
     text-decoration: underline;
   }
 
-  #nav-sp > .menu {
-    text-decoration: none;
-    display: block;
-    margin: 20px 20px;
-    height: 44px;
-    font-size: 16px;
-    background-image: url("images/arrow.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
+#nav-sp > .menu {
+  text-decoration: none;
+  display: block;
+  margin: 20px 20px;
+  height: 44px;
+  font-size: 16px;
+  background-image: url("images/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
 
-  #nav-sp a.menu:hover {
-    background-color: #f5f5f5;
-  }
+#nav-sp a.menu:hover {
+  background-color: #f5f5f5;
+}
 }
